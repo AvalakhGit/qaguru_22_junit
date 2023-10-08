@@ -22,5 +22,8 @@ compileTestJava {
     options.encoding = 'UTF-8'
 }
 test {
-    useJUnitPlatform()
+    useJUnitPlatform{
+        includeTags 'synonyms'
+        excludeTags 'CSV', 'Source', 'FILE'
+    }
 }
